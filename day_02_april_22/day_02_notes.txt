@@ -1,0 +1,20 @@
+Flipkart Example
+================
+1. create an HTML file 
+
+2. use emmet / shortcut to add boilerplate HTML code
+   !
+   button*2
+   button*2{Add To Cart}
+
+3. Add some more content to that HTML file
+
+4. To Open/Run HTML file in Browser
+   a. install vscode extension (open in browser)
+   b. alt+b  / alt+shift+b
+
+
+Softwares to install
+====================
+1. NodeJs 
+2. vscode 
