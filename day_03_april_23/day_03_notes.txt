@@ -1,0 +1,60 @@
+HTML Emmets
+===========
+https://docs.emmet.io/cheat-sheet/
+
+
+!
+h2{Let's learn Emmet}
+#div1
+.div2
+ul>li*5{Country-$}
+select>option*20{Country-$}
+table>tbody>tr*30>td*4{Data-$}
+button.btn.btn-Primary{Primary Button}
+
+
+How to write and execute Javascript Code
+========================================
+1. Browser (FrontEnd Devlopment)
+   a. cretae a javascript file with some javascript content
+   b. include that javascript file in to HTML file
+      <script src="./addition.js"></script>
+   c. open HTML file in browser (alt+b)
+
+2. Nodejs  (BackEnd Development)
+    a. cretae a javascript file with some javascript content
+    b. run that javascript file with the below command
+       node <filename>.js  (make sure nodejs is installed)
+
+Note : Every javascript code that runs on browser, might not work in nodejs
+
+
+What is the best place to add <script> tag , <head> / <body>
+============================================================
+-With HTML5, we got two new boolean attributes for the <script> tag : async and defer.
+ ex:- <script src='demo.js' async/defer></script>
+-async/defer attribute should only be used on external scripts, not with internal scripts.
+-These attributes only make sense while using the script in the head portion of the page.
+-async attribute ensures that the JavaScript file is loaded asynchronously in the background and does not block rendering.
+-defer attribute tells the browser to run the script after the document has been parsed
+-With async, the file gets downloaded asynchronously and then executed as soon as it’s downloaded.
+-With defer, the file gets downloaded asynchronously, but executed only when the document parsing is completed.
+-With defer, scripts will execute in the same order as they are called. 
+ defer is useful when a script depends on another script.
+ https://flaviocopes.com/javascript-async-defer/
+
+
+ Most Commonly used Javascript Methods
+ ======================================
+ console.log()         console : object , log : function
+ document.write()      document : object , write : function
+ window.alert()        window : object , alert : function
+
+
+ Most Commonly Used javascript objects
+ =====================================
+ console : log(), warn(), error(), assert(), table(), time(), timeEnd(), dir()
+ document : write(), writeln()
+ window : alert(), prompt(), confirm(), print(), close()
+ Math : max(), min(), abs(), sqrt()
+ Object : assign(), create(), freeze()

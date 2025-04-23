@@ -1,0 +1,14 @@
+<script>
+    let msg = 'Helloooo, Good Morning!!';
+
+    console.log(msg);
+    document.write(msg);
+    window.alert(msg);
+
+    // log(msg); // No  // Uncaught ReferenceError: log is not defined
+    // write(msg); // No  // Uncaught ReferenceError: write is not defined
+    alert(msg); // yes
+    this.alert(msg); // yes  
+
+    // Note : while accessing window object methods, using window.function() is not mandatory
+</script>
