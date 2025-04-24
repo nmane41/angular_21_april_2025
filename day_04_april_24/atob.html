@@ -1,0 +1,10 @@
+<script>
+    let password = 'Hello_2025';
+    console.log(`Password Without Encryption: ${password}`);
+
+    let encryptedPassword = btoa(password);
+    console.log(`Encrypted password: ${encryptedPassword}`);
+
+    let decryptedPassword = atob(encryptedPassword)
+    console.log(`Decrypted Password: ${decryptedPassword}`);
+</script>
