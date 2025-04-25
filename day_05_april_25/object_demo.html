@@ -1,0 +1,17 @@
+<script>
+    let obj = { a: 10, b: 20 };
+    let arr = [10, 20];
+
+    console.log(typeof obj); // object
+    console.log(typeof arr); // object
+
+    // every array is an object, but every object is not array
+    console.log(obj instanceof Object);  // true
+    console.log(arr instanceof Object);  // true
+
+    console.log(obj instanceof Array);  // false
+    console.log(arr instanceof Array);  // true
+
+    console.log(Array.isArray(obj)); //false
+    console.log(Array.isArray(arr)); //true
+</script>

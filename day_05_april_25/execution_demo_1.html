@@ -1,0 +1,26 @@
+<script>
+    console.log('Global code starts here...')
+
+    console.log(a);
+    var a = 10;
+    console.log(a);
+
+    // console.log(b);
+    let b = 20;
+    console.log(b);
+
+    function f1() {
+        console.log('f1 starts here...')
+        var x = 100;
+        let y = 200;
+
+        console.log(x)
+        console.log(y)
+        console.log('f1 ends here...')
+    }
+    f1();
+    console.log('Global code ends here...')
+
+    // How many Execution Contexts : 2
+    // 1. Global 2. function-f1
+</script>

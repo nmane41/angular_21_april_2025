@@ -27,14 +27,4 @@ Datatypes
      compared by reference
 
 
-Primitive							Non-primitive/Complex
---------------					-------------------------
-  1. number							1. Object (Object & Array)
-  2. string								
-  3. boolean(true,false)
-  4. undefined(undefined)
-  5. null
-  6. symbol(ES-6)
-  7. bigint (const x = 2n ** 53n;)
-     appending n to the end of an integer literal
 

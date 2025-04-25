@@ -1,0 +1,15 @@
+<script>
+    var a = 10;
+    console.log('Global:', a); // 10
+    function f1() {
+        var b = 20; // function scope, not visible outside function
+        if (true) {
+            var c = 30;
+            console.log('Block:', c); // 30
+        }
+        console.log('Function:', c); // 30
+        // even though 'c' is declared inside a block, it's visible outside the block
+    }
+    f1();
+    // console.log('b is ', b); // No , b is not defined
+</script>
