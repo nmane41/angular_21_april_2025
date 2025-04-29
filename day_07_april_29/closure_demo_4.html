@@ -1,0 +1,35 @@
+<script>
+    // Closure For Data encapsulation
+    let account = { accNo: 12345, accbal: 5000 };  // not encapsulated
+    console.log(account.accNo, account.accbal); // read
+    account.accbal = -30000000; // write
+    console.log(account.accNo, account.accbal); // read
+
+    function openAccount(initialBal) {
+        let accNo = 11223344;
+        let accBal = initialBal;
+
+        return {
+            displayInfo: function () {
+                console.log(`Account #${accNo} has balance Rs:${accBal}`);
+            },
+            deposit: function (amt) {
+                if (amt < 0) {
+                    alert('Sorry Boss!! I dont need your money. just keep that with you!!!');
+                } else {
+                    accBal = accBal + amt;
+                }
+            }
+        }
+    }
+    let encapsulatedAccount = openAccount(3000);
+    console.log(encapsulatedAccount);
+
+    encapsulatedAccount.displayInfo();
+    encapsulatedAccount.deposit(-4000);
+    encapsulatedAccount.displayInfo();
+    encapsulatedAccount.deposit(4000);
+    encapsulatedAccount.displayInfo();
+
+    console.dir(encapsulatedAccount);
+</script>
