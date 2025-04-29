@@ -1,0 +1,13 @@
+<script>
+    let arr1 = [10, 20, 30, 40, 50];
+
+    // increase each value in the array by 5 , map();
+    function increaseBy5(val) { // this function ll be called 'n' times, if array has 'n' items
+        return val + 5;
+    }
+    let res1 = arr1.map(increaseBy5);
+    console.log(res1);
+
+    let res2 = arr1.map((val)=>val+5);
+    console.log(res2);
+</script>

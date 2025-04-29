@@ -1,0 +1,25 @@
+<script>
+    // Function Declaration / named function
+    add(2, 3);
+    function add(a, b) {
+        console.log(`addition of ${a} and ${b} is ${a + b}`);
+    }
+    add(3, 4);
+
+    // Function Expression (anonymous)
+    var sub = function (a, b) {
+        console.log(`subtraction of ${a} and ${b} is ${a - b}`);
+    }
+    sub(10, 4);
+
+    // self-invoked (IIFE- Immediately Invoked Function Expression)
+    (function (a, b) {
+        console.log(`Multiplication of ${a} and ${b} is ${a * b}`);
+    })(4, 5);
+
+    // Arrow Function (ES-6)
+    var div = (a, b) => {
+        console.log(`Division of ${a} and ${b} is ${a / b}`);
+    }
+    div(20, 4);
+</script>

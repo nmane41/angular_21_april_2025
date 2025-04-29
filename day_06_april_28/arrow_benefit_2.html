@@ -1,0 +1,19 @@
+<script>
+    class Student {
+        firstName = 'virat';
+        lastName = 'kohli';  // this = Student
+
+        fullName1() { //  this = how the function is invoked
+            console.log(this.firstName, this.lastName, this);
+        }
+        fullName2 = () => { // where the function is written
+            console.log(this.firstName, this.lastName, this); // this = Student
+        }
+    }
+    let std = new Student();
+    std.fullName1(); // inside fullName1, this = std
+    std.fullName2(); // inside fullName2, this = std
+
+    setTimeout(std.fullName1, 2000);  // insideFullname1 , this = window
+    setTimeout(std.fullName2, 4000);  // inside fullName2, this = std
+</script>
