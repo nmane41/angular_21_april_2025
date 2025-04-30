@@ -1,0 +1,18 @@
+<script>
+    let str = 'hello';
+
+    console.log('length is ', str.length);
+    console.log('uppercase is ', str.toUpperCase());
+    console.log('toLowerCase is ', str.toLowerCase());
+
+    console.log('char at index 1 is ', str.charAt(1));  // e
+    console.log('char at index 1 is ', str.at(1));  // e
+
+    // at() works with -ve index also, chartAt() doesn't
+    console.log('last char ', str.charAt(-1));  // 
+    console.log('last char ', str.at(-1));  // o
+
+    console.log('charCode ', str.charCodeAt(1));  // e = 101
+    console.log(str.concat(' Javascript'));
+
+</script>

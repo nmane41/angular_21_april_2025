@@ -1,0 +1,26 @@
+<script>
+    let str1 = 'hello';  // string literal
+    let str2 = 'hello';  // string literal / primitive string
+
+    let str3 = new String('hello');  // string object
+    let str4 = new String('hello');  // string object
+
+    // datatype difference
+    console.log(typeof str1);  // string
+    console.log(typeof str3);  // object
+
+    // the way comparision happens
+    console.log(str1 == str2);  // value comparision
+    console.log(str1 == str3);  // object gets converted to literal & compare
+    console.log(str3 == str4);  // reference comparision
+
+    // eval() cann't be used with objects
+    let str5 = '2+3+4';
+    let str6 = new String('2+3+4');
+    console.log(eval(str5));  // 9
+    console.log(eval(str6));  // String {'2+3+4'}
+
+    // convert string object to literal
+    let str7 = str6.valueOf();
+    console.log(eval(str7));  // 9
+</script>
