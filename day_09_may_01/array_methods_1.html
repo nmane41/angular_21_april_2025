@@ -1,0 +1,24 @@
+<script>
+    let arr = [10, 20, 30];
+
+    console.log('Before Push: ', arr);
+    arr.push(40);
+    console.log('After Push: ', arr);
+
+    arr.pop();
+    console.log('After pop: ', arr);
+
+    arr.unshift(40); // adds item to the begining of the array
+    console.log('After unshift: ', arr); // [40,10,20,30]
+
+    arr.shift(); // deletes the first element of the array
+    console.log('After unshift: ', arr); // [10,20,30]
+
+    // splice(ind , delete count , elements to insert)
+    // 1. only delete    2. only insert   3. both delete and insert
+    arr.splice(1, 1);   // only delete
+    arr.splice(1, 0, 20); // only insert
+    console.log(arr);   // [10,20,30]
+    arr.splice(1, 2, 25, 35); // [10,25,35]
+    console.log(arr);  
+</script>
