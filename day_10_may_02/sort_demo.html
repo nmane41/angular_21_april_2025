@@ -1,0 +1,21 @@
+<script>
+    let arr = [10, 50, 40, 30, 20];
+    arr.sort();
+    console.log(arr);
+
+    let arr2 = [7, 10, 101, 9, 91, 85, 92, 75, 105, 109];
+    arr2.sort();
+    console.log(arr2);
+
+    arr2.sort((a, b) => {
+        return a - b
+    });  // asc sort
+    console.log(arr2)
+
+    arr2.sort((a, b) => b - a);  // desc sort
+    console.log(arr2)
+
+    let cars = ['tata', 'honda', 'maruti', 'hundai'];
+    let sortedCars = cars.toSorted();
+    console.log(cars, sortedCars)
+</script>
