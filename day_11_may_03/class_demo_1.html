@@ -1,0 +1,33 @@
+<script>
+    // Normal function 
+    function addition(a, b, c) {
+        console.log('addition is ', (a + b + c));
+    }
+    addition(2, 3, 4); // 9
+
+    // ES-5
+    function Stud(roll, name, course, trainer) {  // constructor 
+        this.roll = roll;
+        this.name = name;
+        this.course = course;
+        this.trainer = trainer;
+    }
+    let std1 = new Stud(101, 'pritam', 'Angular', 'sanjay');
+    let std2 = new Stud(102, 'deepak', 'React', 'sudhakar');
+    console.log(std1)
+    console.log(std2)
+
+    // ES-6
+    class Student {
+        constructor(roll, name, course, trainer) {
+            this.roll = roll;
+            this.name = name;
+            this.course = course;
+            this.trainer = trainer;
+        }
+    }
+    let std3 = new Student(101, 'pritam', 'Angular', 'sanjay');
+    let std4 = new Student(102, 'deepak', 'React', 'sudhakar');
+    console.log(std3)
+    console.log(std4)
+</script>
