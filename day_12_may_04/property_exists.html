@@ -1,0 +1,25 @@
+<script>
+    function Stud(roll, name, course, trainer) {  // constructor 
+        this.roll = roll;
+        this.name = name;
+        this.course = course;
+    }
+    Stud.prototype.clgName = 'nareshIT';
+
+    let std1 = new Stud(101, 'pritam', 'Angular');
+    let std2 = new Stud(102, 'deepak', 'React');
+    console.log(std1);
+    console.log(std2);
+
+    console.log('name' in std1); // true
+    console.log(std1.hasOwnProperty('name')); // true
+
+    console.log('roll' in std1); // true
+    console.log(std1.hasOwnProperty('roll')); // true
+
+    console.log('clgName' in std1); // true
+    console.log(std1.hasOwnProperty('clgName')); // false
+
+    console.log('courseEnrolled' in std1); // false
+    console.log(std1.hasOwnProperty('courseEnrolled')); // false
+</script>

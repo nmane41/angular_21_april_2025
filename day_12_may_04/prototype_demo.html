@@ -1,0 +1,23 @@
+<script>
+    function Stud(roll, name, course, trainer) {  // constructor 
+        this.roll = roll;
+        this.name = name;
+        this.course = course;
+        this.trainer = trainer;
+        // this.clgName = 'nareshIT';
+    }
+    Stud.prototype.clgName = 'nareshIT';
+
+    let std1 = new Stud(101, 'pritam', 'Angular', 'sanjay');
+    let std2 = new Stud(102, 'deepak', 'React', 'sudhakar');
+    console.log(std1);
+    console.log(std2);
+
+    console.log(std1.roll, std1.name, std1.clgName);
+    console.log(std2.roll, std2.name, std2.clgName);
+
+    std1.clgName = 'Naresh Info Tech'; 
+
+    console.log(std1.roll, std1.name, std1.clgName);
+    console.log(std2.roll, std2.name, std2.clgName);
+</script>

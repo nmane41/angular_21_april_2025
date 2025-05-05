@@ -1,0 +1,26 @@
+<script>
+    let user = { firstName: 'sachin', 'last name': 'tendulkar', age: 35, add: 'mumbai' };
+
+    console.log(user.firstName); // sachin
+    console.log(user['age']); // 35
+
+    // when key contains a space, [] should be used
+    // console.log(user.last name);
+    console.log(user['last name']);
+
+
+    // if key is stored as a value in a variable
+    let x = 'add';
+    console.log(user.x); // undefined
+    console.log(user[x]); // mumbai
+
+    console.log("==========================")
+
+    // while iterating array key-values
+    for (key in user) {
+        console.log((key + " ========= " + user[key]))
+    }
+
+    let all_keys = Object.keys(user);
+    console.log(all_keys, all_keys.length)
+</script>
