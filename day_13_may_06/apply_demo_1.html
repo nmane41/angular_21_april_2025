@@ -1,0 +1,14 @@
+<script>
+    function add(a, b) {
+        console.log(a + b + this.num);
+    }
+    add(2, 3);  // 2, 3 , undefined (this = window)
+
+    let obj1 = { num: 4 };
+    add.call(obj1, 2, 3);  // inside add() , this = obj1
+
+    let arr = [2, 3];
+    add.call(obj1, arr);  // inside add() , this = obj1,  a=[2,3]  b=undefined
+
+    add.apply(obj1, arr);  // inside add() , this = obj1, a=arr[0]  b=arr[1]
+</script>

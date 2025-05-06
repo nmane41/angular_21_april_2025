@@ -1,0 +1,17 @@
+<script>
+    let obj1 = {
+        a: 10, b: 20,
+        add: function () { // this = obj1 / obj2 / obj3
+            console.log(`Addition of ${this.a} and ${this.b} is ${this.a + this.b}`)
+        }
+    }
+    obj1.add(); // inside add(), this = obj1
+
+    let obj2 = { a: 100, b: 200 };
+    // obj2.add();
+    obj1.add.call(obj2); // call add() by setting this=obj2
+
+    let obj3 = { a: 1000, b: 2000 };
+    // obj3.add();
+    obj1.add.call(obj3); // call add() by setting this=obj2
+</script>
