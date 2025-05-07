@@ -1,0 +1,19 @@
+<script>
+    function a() {
+        console.log('AAA')
+    }
+    function b() {
+        console.log('BBB')
+    }
+    function c() {
+        console.log('CCC')
+    }
+    function d() {
+        console.log('DDD')
+    }
+
+    a()
+    setTimeout(b, 0);
+    Promise.resolve().then(c);
+    d();
+</script>

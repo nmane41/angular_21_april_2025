@@ -1,0 +1,11 @@
+<body>
+    <h2></h2>
+
+    <script>
+        function displayTime() {
+            let time = new Date().toLocaleTimeString();
+            document.querySelector('h2').innerText = time;
+        }
+        setInterval(displayTime, 1000);
+    </script>
+</body>
