@@ -1,0 +1,20 @@
+<script>
+    function add(a, b) {
+        console.log(a + b + this.num);
+    }
+    add(2, 3);  // 2, 3 , undefined (this = window)
+
+    let obj1 = { num: 4 };
+    add.call(obj1, 2, 3);  // inside add(), this = obj1
+    add.call(obj1, 3, 4);  // inside add(), this = obj1
+    add.call(obj1, 4, 5);  // inside add(), this = obj1
+    add.call(obj1, 5, 6);  // inside add(), this = obj1
+
+    console.log("==============")
+    // bind() , binds 'this' value with a function returns a new function
+    let sum = add.bind(obj1); // inside add() , this = obj1
+    sum(2, 3)
+    sum(3, 4)
+    sum(4, 5)
+    sum(5, 6)
+</script>

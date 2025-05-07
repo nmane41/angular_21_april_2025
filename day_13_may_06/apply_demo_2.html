@@ -4,4 +4,8 @@
     let arr = [10, 20, 30, 40, 50];
     console.log(Math.max(arr));  // NaN
     // max() is expecting few numbers , it's not expecting an array 
+
+    console.log(Math.max.apply({}, arr));  // breaks the array to individual values
+
+    console.log(Math.max(...arr)); // spread - breaks the array to individual values
 </script>
