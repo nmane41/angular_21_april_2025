@@ -1,0 +1,18 @@
+<script>
+    function add(a, b) {
+        console.log(a + b)
+    }
+    add(10, 20);
+
+    // write a function that should be able to add N of parameters
+    function sum(...arr) { // arr is rest parameter
+        let res = 0;
+        for (ele of arr) {
+            res = res + ele
+        }
+        console.log(res)
+    }
+    sum(10, 20);
+    sum(10, 20, 30);
+    sum(10, 20, 30, 40);
+</script>

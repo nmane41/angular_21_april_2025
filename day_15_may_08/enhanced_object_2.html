@@ -1,0 +1,19 @@
+<script>
+    // ES_5
+    function demo1(brand, model, price, year) {
+        return {
+            brand: brand,
+            model: model,
+            price: price,
+            year: year
+        }
+    }
+    console.log(demo1('HP', 'Pro Book', 42000, 2023));
+
+
+    // ES_6
+    function demo2(brand, model, price, year) {
+        return { brand, model, price, year } // enhanced object
+    }
+    console.log(demo2('Dell', 'Inspiron', 55000, 2024));
+</script>

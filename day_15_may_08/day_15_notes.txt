@@ -1,0 +1,56 @@
+Javascript : Programming language, follows ECMAscript standards
+ECMAscript : Standard Provider
+
+ECMA : European Computer Menufecturer Association
+
+ES-5    <2015
+ES-6    2015
+ES-7    2016
+ES-8    2017
+ES-9    2018
+ES-10    2019
+ES-11   2020
+ES-12   2021
+ES-13   2022
+ES-14   2023
+ES-15   2024
+
+
+ECMAscript-6 & beyond
+=====================
+1. Block-Scoped Variables (let, const)
+2. Arrow Function
+3. Template Literal
+4. Multiline String
+5. destructuring
+6. enhanced object Literal
+7. REST parameter
+8. Spread Operator
+9. default parameter
+10. class
+11. module
+12. Symbol Datatype
+13. Map & Set
+14. for-in , for-of
+15. ** exponent
+
+
+Symbol 
+======
+-A 'symbol' represents a unique identifier.
+-Symbols are often used to add unique property keys to an object that won’t collide with keys.
+-create a symbol by calling the Symbol(), not by using new keyword.
+ let sym1 = Symbol()  // correct
+ let sym2 = new Symbol()  // TypeError
+-Even if we create many symbols with the same description, they are different values.
+ Symbol('foo') === Symbol('foo')  // false
+-Symbols allow us to create “hidden” properties of an object, 
+ that no other part of code can accidentally access or overwrite.
+-If we want to use a symbol in an object literal,we need square brackets around it.
+ let id = Symbol('User Id');
+ let user = {name:'sanjay',[id]:123}
+-Symbols are not enumerated,Symbols are skipped by for…in while we iterate object properties.
+-Symbols are not part of the Object.keys() or Object.getOwnPropertyNames()
+-Symbols assigned to an object can be accessed using the Object.getOwnPropertySymbols() method
+-Object.assign() copies both string and symbol properties.
+

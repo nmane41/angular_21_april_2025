@@ -1,0 +1,23 @@
+<script>
+    // in an object the key should be either 'string' or 'symbol'
+    let id = Symbol();
+    let sal = Symbol();
+    let user = {
+        [id]: 101,
+        'firstName': 'Sachin',
+        'lastName': 'Tendulkar',
+        'address': 'Mumbai',
+        [sal]: 5000
+    }
+    console.log(user);
+
+    // how to access symbol properties
+    console.log(user[id], user[sal], user['firstName']);
+
+    for (key in user) {
+        console.log(key + " ======== " + user[key])
+    }
+
+    let all_keys = Object.keys(user);
+    console.log(all_keys)
+</script>

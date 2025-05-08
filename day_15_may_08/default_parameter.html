@@ -1,0 +1,21 @@
+<script>
+    function add(a, b, c) {
+        console.log(a + b + c);
+    }
+    add(10, 20); // NaN
+
+    function addition(a, b, c) {
+        a = a | 0;   // es-5
+        b = b | 0;
+        c = c | 0;
+        console.log(a + b + c);
+    }
+    addition(10, 20); // 30
+
+    // es-6
+    function sum(a, b, c = 0) {  // c = 0 default initialization
+        console.log(a + b + c);
+    }
+    sum(10, 20); // 30
+    sum(10, 20, 30); // 30
+</script>
