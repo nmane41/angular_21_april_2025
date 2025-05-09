@@ -1,0 +1,25 @@
+<script>
+    let str = 'entertainment';
+
+    // using object
+    let res1 = {};
+    for (char of str) {
+        if (res1[char]) {
+            res1[char] = res1[char] + 1;
+        } else {
+            res1[char] = 1;
+        }
+    }
+    console.log(res1);
+
+    // using map
+    let charMap = new Map();
+    for (char of str) {
+        if (charMap.has(char)) {
+            charMap.set(char, charMap.get(char) + 1)
+        } else {
+            charMap.set(char, 1)
+        }
+    }
+    console.log(charMap)
+</script>

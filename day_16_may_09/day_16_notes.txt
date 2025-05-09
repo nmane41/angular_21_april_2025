@@ -1,0 +1,31 @@
+ES_6 features
+==============
+module
+Symbol Datatype
+Map & Set
+for-in , for-of
+** exponent
+
+
+Object vs Map
+==============
+-object length cann't be calculated easily,where as map has a size property 
+-objects are not iterable inherently, map can be iterated
+
+
+module
+======
+-Module Systems : Commonjs(nodejs) , EJS(Angular,React), AMD, UMD
+
+CommonJs / CJS  : module.exports = {} , require()
+EJS : import , export
+
+Note : To load an ES module, 
+    1. set "type": "module" in the package.json
+    2. use the .mjs extension
+
+
+Promise
+=======
+-A promise is an object whose value is not known now but will be available in near future.
+-Promise is a pre-defined class in javascript

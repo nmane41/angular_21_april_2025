@@ -1,0 +1,29 @@
+<script>
+    let myMap = new Map();
+
+    // add key:value to a map
+    myMap.set('name', 'sanjay');
+    myMap.set('add', 'bangalore');
+    myMap.set('age', 40);
+
+    // print map
+    console.log(myMap);
+
+    // how to read value
+    console.log(myMap.get('add')); // Bangalore
+
+    // how to check length
+    console.log(myMap.size)
+
+    // check if prop exists
+    console.log(myMap.has('add')); // true
+    console.log(myMap.has('dob')); // false
+
+    // delete a property
+    myMap.delete('age');
+    console.log(myMap);
+
+    // how to delete every property
+    myMap.clear();
+    console.log(myMap);
+</script>

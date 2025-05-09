@@ -1,0 +1,29 @@
+<script>
+    let myObj = {};
+
+    // add key:value to a obj
+    myObj.name = 'sanjay'
+    myObj.add = 'Bangalore'
+    myObj.age = 40;
+
+    // print obj
+    console.log(myObj);
+
+    // how to read value
+    console.log(myObj.add); // Bangalore
+
+    // how to check length
+    console.log(Object.keys(myObj).length)
+
+    // check if prop exists
+    console.log(myObj.hasOwnProperty('add')); // true
+    console.log(myObj.hasOwnProperty('dob')); // false
+
+    // delete a property
+    delete myObj.age
+    console.log(myObj);
+
+    // how to delete every property
+    myObj = {}
+    console.log(myObj)
+</script>
