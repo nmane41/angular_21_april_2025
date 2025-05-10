@@ -1,0 +1,60 @@
+<script>
+    function who() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('Sanjay')
+            }, 2000)
+        });
+    }
+    function what() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('teaches Javascript')
+            }, 3000)
+        });
+    }
+    function where() {
+        return new Promise((resolve, reject) => {
+            setTimeout(() => {
+                resolve('in class')
+            }, 2000)
+        });
+    }
+
+    who().then(
+        (responseWho) => {
+            console.log('response from who', responseWho);
+            what().then(
+                (reponseWhat) => {
+                    console.log('response from what', reponseWhat);
+                    where().then(
+                        (responseWhere) => {
+                            console.log('response from where', responseWhere);
+                        },
+                        (errorWhere) => {
+                            console.log(responseWho)
+                        }
+                    )
+                },
+                (errorWhat) => {
+                    console.log(errorWhat)
+                }
+            )
+        },
+        (errorWho) => {
+            console.log(errorWho)
+        }
+    )
+
+    async function test() {
+        try {
+            let whoResponse = await who();
+            let whatResponse = await what();
+            let whereResponse = await where();
+            console.log(whoResponse, whatResponse, whereResponse);
+        } catch (err) {
+            console.log(err);
+        }
+    }
+    test();
+</script>

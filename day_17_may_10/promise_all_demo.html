@@ -1,0 +1,26 @@
+<script>
+    let url1 = 'https://jsonplaceholder.typicode.com/users/1'; // 1
+    let url2 = 'https://jsonplaceholder.typicode.com/users/2'; // 2
+    let url3 = 'https://jsonplaceholder.typicode.com/users/3'; // 1
+
+    Promise.all([fetch(url1), fetch(url2), fetch(url3)]).then(
+        ([response1, response2, response3]) => {
+            Promise.all([response1.json(), response2.json(), response3.json()]).then(
+                (finalResponses) => {
+                    console.log(finalResponses)
+                }
+            )
+        },
+        (err) => {
+            console.log('one of the promise failed')
+        }
+    )
+
+
+    async function getData() {
+        let [res1, res2, res3] = await Promise.all([fetch(url1), fetch(url2), fetch(url3)]);
+        let [data1, data2, data3] = await Promise.all([res1.json(), res2.json(), res3.json()])
+        console.log(data1, data2, data3)
+    }
+    getData()
+</script>
